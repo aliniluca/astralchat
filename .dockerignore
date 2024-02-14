@@ -1,0 +1,15 @@
+fly.toml
+Dockerfile
+.dockerignore
+node_modules
+.git
+icon16.png
+icon48.png
+icon128.png
+manifest.json
+manifest-newtab.json
+notes.txt
+README.md
+.idea
+.env
+src-webstore

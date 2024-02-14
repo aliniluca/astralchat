@@ -1,0 +1,7 @@
+/.idea/
+notes.txt
+/node_modules/
+.env
+*.zip
+build
+build-newtab
