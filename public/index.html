@@ -71,30 +71,8 @@
     </footer>
 </main>
 <script>
-  // Get the iframe element
-var iframe = document.getElementById('myIframe');
-
-// Wait for the iframe content to load
-iframe.onload = function() {
-  // Access the iframe's document
-  var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-
-  // Select all divs with the class 'typebot-host-bubble' inside the iframe
-  var elements = iframeDoc.querySelectorAll('.typebot-host-bubble');
-
-  // Loop through the selected elements
-  elements.forEach(function(element) {
-    // Check if the text content includes the specific text
-    if (element.textContent.includes('...is recording an audio')) {
-      // Remove the element from the DOM of the iframe
-      element.remove();
-    }
-  });
-};
-
-// Set the src of the iframe if not already set or to trigger reload
-// iframe.src = 'your-iframe-source.html';
-
+// Send a message to the iframe to trigger the deletion
+iframe.contentWindow.postMessage("delete-divs", "https://typebot.co");
 
 </script>
 <script src="/lib/d3.min.js"></script>
