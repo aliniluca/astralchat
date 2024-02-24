@@ -63,7 +63,10 @@
             You can ask ANY question in the input field and get the answer by the wise
             all-knowing universe.
         </p>
-       
+        <div id="myModal" class="modal">
+  <div class="modal-content">
+    <p>...recording an audio</p>
+  </div>
     <footer>
         <button id="about-button" class="about-button">About</button>
         <a href="https://www.mermaidi.de" target="_blank">👽 Maidi</a>
@@ -76,6 +79,29 @@
 iframe.contentWindow.postMessage("delete-divs", "https://freelovereading.vercel.app");
 
 </script>
+    /* Simple styling for the modal */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 999999; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            padding-top: 60px;
+        }
+
+        /* Modal Content/Box */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+        }
 <script src="/lib/d3.min.js"></script>
 <script src="/lib/d3.geo.projection.min.js"></script>
 <script src="/js/celestial.js"></script>
