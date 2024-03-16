@@ -71,30 +71,27 @@
     </footer>
 </main>
 <script>
-    // Listen for messages from the iframe
+// Listen for messages from the iframe
 window.addEventListener('message', function(event) {
-    // Check the origin of the message for security
-    if (event.origin !== "https://typebot.co") return;
+  // Check the origin of the message for security
+  if (event.origin !== "https://typebot.co") return;
 
-    // Check the message content
-    if (event.data === "startRecording") {
-        var h1Element = document.querySelector('h1 span');
-        if (h1Element) {
-            // Change the text to "Sophia is recording an audio"
-            h1Element.textContent = "Sophia is recording an audio";
- h1Element.classList.add('recording');
-            // Set a timeout to change the text back after 3 seconds
-            setTimeout(function() {
-                h1Element.textContent = "Sophia is here to talk with you";
-                 h1Element.classList.remove('recording');
-            }, 3000);
-        }
-    }
+  // Check the message content
+  if (event.data === "startRecording") {
+    Swal.fire({
+      title: 'Sophia is recording an audio',
+      timer: 3000,
+      timerProgressBar: true,
+      showConfirmButton: false,
+      allowOutsideClick: false,
+      allowEscapeKey: false
+    });
+  }
 }, false);
 
 
 </script>
-  
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="/lib/d3.min.js"></script>
 <script src="/lib/d3.geo.projection.min.js"></script>
 <script src="/js/celestial.js"></script>
