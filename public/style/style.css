@@ -56,8 +56,9 @@ h1 {
   text-align: center;
 }
 h1.recording {
-  opacity: 1;
+ opacity: 1;
   animation: blink 1s linear infinite;
+  pointer-events: auto;
 }
 
 @keyframes blink {
